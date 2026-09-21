@@ -23,6 +23,17 @@
   "type": "quickjs"
     },
     {
+  "id": "radio",
+  "name": "RADIO.APP",
+  "description": "Radio por internet con SomaFM",
+  "author": "NexOS",
+  "version": "1.0.0",
+  "size": 12000,
+  "url": "apps/radio.js",
+  "icon": "radio",
+  "type": "quickjs"
+    },
+    {
       "id": "counter",
       "name": "COUNTER.APP",
       "description": "Contador con D-Pad",
