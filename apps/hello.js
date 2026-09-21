@@ -1,0 +1,51 @@
+// HELLO.APP · demo mínima
+var W = 240, H = 320;
+var t = 0;
+
+function main() {
+  __hw_log('hello abierta');
+  beepUI(1400, 60, 160, 0);
+  t = 0;
+}
+
+function frame() {
+  t++;
+  clear(0x1082);
+
+  // Header
+  rect(0, 0, W, 22, 0x0000);
+  rect(0, 21, W, 1, 0x2945);
+  drawText(8, 8, 'HELLO', 0x07E0);
+
+  // Color que cambia con el tiempo
+  var hue = Math.floor(t / 15) % 6;
+  var colors = [0x07E0, 0x07FF, 0xF800, 0xFFE0, 0xF81F, 0xFFFF];
+  var c = colors[hue];
+
+  // Un cuadrado grande girando por la pantalla
+  var angle = t * 0.04;
+  var cx = 120 + Math.floor(Math.sin(angle) * 70);
+  var cy = 160 + Math.floor(Math.cos(angle * 1.3) * 60);
+
+  for (var dy = -20; dy < 20; dy++) {
+    for (var dx = -20; dx < 20; dx++) {
+      rect(cx + dx, cy + dy, 1, 1, c);
+    }
+  }
+
+  // Texto
+  drawText(60, 100, 'HOLA MUNDO', 0xFFFF);
+  drawText(40, 240, 'INSTALADA DESDE', 0xBDD7);
+  drawText(40, 256, 'LA APP STORE', 0x07E0);
+
+  // Footer
+  rect(0, H - 24, W, 24, 0x0000);
+  rect(0, H - 24, W, 1, 0x2945);
+  drawText(8, H - 16, 'BACK=SALIR', 0xCE79);
+
+  var k = r16(IO + IO_KEY);
+  if (k === K_BACK) {
+    beepUI(600, 30, 120, 0);
+    __os_exit();
+  }
+}
