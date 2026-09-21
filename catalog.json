@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "updated": "2026-09-21T12:00:00Z",
+  "apps": [
+    {
+      "id": "hello",
+      "name": "HELLO.APP",
+      "description": "Dice hola con estilo",
+      "author": "NexOS",
+      "version": "1.0.0",
+      "size": 512,
+      "url": "apps/hello.js",
+      "type": "quickjs"
+    },
+    {
+      "id": "counter",
+      "name": "COUNTER.APP",
+      "description": "Contador con D-Pad",
+      "author": "NexOS",
+      "version": "1.0.0",
+      "size": 700,
+      "url": "apps/counter.js",
+      "type": "quickjs"
+    }
+  ]
+}
