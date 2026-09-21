@@ -13,10 +13,6 @@
       "type": "quickjs"
     },
     {
-  "version": 1,
-  "updated": "2026-09-21T12:00:00Z",
-  "apps": [
-    {
       "id": "clima",
       "name": "CLIMA.APP",
       "description": "Clima real con Open-Meteo",
@@ -62,7 +58,6 @@
           "00000000000000000000000000000000"
         ]
       }
-    }
     },
     {
       "id": "radio",
