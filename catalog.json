@@ -13,6 +13,16 @@
       "type": "quickjs"
     },
     {
+  "id": "clima",
+  "name": "CLIMA.APP",
+  "description": "Clima real con Open-Meteo",
+  "author": "NexOS",
+  "version": "1.0.0",
+  "size": 8000,
+  "url": "apps/clima.js",
+  "type": "quickjs"
+    },
+    {
       "id": "counter",
       "name": "COUNTER.APP",
       "description": "Contador con D-Pad",
